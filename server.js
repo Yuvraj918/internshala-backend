@@ -55,8 +55,8 @@ const upload = multer({
 // Helper function to add image URLs
 const addImageUrls = (item) => ({
   ...item.toObject(),
-  coverImageUrl: item.coverImage ? `http://localhost:${PORT}/uploads/${item.coverImage}` : null,
-  additionalImageUrls: item.additionalImages.map(img => `http://localhost:${PORT}/uploads/${img}`)
+  coverImageUrl: item.coverImage ? `https://internshala-backend-j6l3.onrender.com/uploads/${item.coverImage}` : null,
+  additionalImageUrls: item.additionalImages.map(img => `https://internshala-backend-j6l3.onrender.com/uploads/${img}`)
 });
 
 
@@ -135,5 +135,5 @@ app.use((error, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on https://internshala-backend-j6l3.onrender.com`);
 });
